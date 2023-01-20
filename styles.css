@@ -1,0 +1,164 @@
+.wcc,
+.bounce,
+.fade {
+  background: #003580;
+  color: #e9f0fa;
+  line-height: 6em;
+  width: 6em;
+  height: 6em;
+  margin: 1em auto;
+}
+
+thead th {
+  background: #e9f0fa;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+th p,
+td div {
+  font-family: sans-serif;
+}
+
+code {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+th code {
+  font-size: 1.4em;
+}
+
+td {
+  text-align: center;
+}
+
+tbody th {
+  text-align: left;
+  width: 25%;
+}
+
+thead th {
+  width: 25%;
+}
+
+th,
+td {
+  line-height: 1.5em;
+  padding: 1.5em;
+  vertical-align: top;
+}
+
+.trigger {
+  cursor: pointer;
+}
+
+.fade {
+  transition: background 156ms, color 156ms;
+}
+
+td code {
+  display: block;
+}
+
+.wcc {
+  transition: border-radius cubic-bezier(0.165, 0.84, 0.44, 1) 400ms;
+}
+
+.fade {
+  transition: background 250ms cubic-bezier(0.47, 0, 0.745, 0.715),
+    color 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.easing_subtle_ease-out .fade {
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1),
+    cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.fade.activated {
+  background: #e9f0fa;
+  color: #003580;
+}
+
+.easing_subtle_ease-in-out .fade {
+  position: relative;
+  overflow: hidden;
+}
+
+.easing_subtle_ease-in-out .fade:before {
+  content: " ";
+  background: linear-gradient(
+    90deg,
+    rgba(83, 123, 180, 0) 10%,
+    rgba(83, 123, 180, 1) 60%,
+    rgba(83, 123, 180, 0) 90%
+  );
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: shimmer 1024ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.easing_default_ease-in .wcc {
+  animation: morph-to-circle 2560ms infinite
+    cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+@keyframes morph-to-circle {
+  0% {
+    border-radius: 0;
+  }
+  25%,
+  25.1%,
+  100% {
+    border-radius: 50%;
+  }
+}
+
+.easing_default_ease-out .activated {
+  border-radius: 50%;
+}
+
+.easing_default_ease-in-out .wcc {
+  animation: back-and-forth 2560ms infinite cubic-bezier(0.77, 0, 0.175, 1)
+    alternate;
+}
+
+@keyframes back-and-forth {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.bounce {
+  transition: transform 640ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.bounce.activated {
+  transform: scale(0.8);
+}
+
+.easing_bounce_ease-out .bounce {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.easing_bounce_ease-in-out .bounce {
+  animation: back-and-forth 2560ms infinite alternate
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

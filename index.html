@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <table class="easing-chart">
+            <thead>
+              <tr>
+                <th></th>
+                <th scope="col">
+                  <code>ease-in</code>
+                  <p>Does the animation start on its own?</p>
+                </th>
+                <th scope="col">
+                  <code>ease-out</code>
+                  <p>Does the animation start under a cursor or fingertip?</p>
+                </th>
+                <th scope="col">
+                  <code>ease-in-out</code>
+                  <p>Are you moving something from one location to another?</p>
+                </th>      
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <code>default</code>
+                  <p>Are you morphing or moving the element?<p>
+                </th>
+                <td class="easing_default_ease-in">
+                  <div class="wcc controlled"></div>
+                  <code>cubic-bezier(0.895, 0.03, 0.685, 0.22)</code>
+                </td>
+                <td class="easing_default_ease-out">
+                  <div class="wcc trigger">Click me!</div>
+                  <code>cubic-bezier(0.165, 0.84, 0.44, 1)</code>        
+                </td>
+                <td class="easing_default_ease-in-out">
+                  <div class="wcc"></div>
+                  <code>cubic-bezier(0.77, 0, 0.175, 1)</code>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <code>bounce</code>
+                  <p>Do you need to attract attention? Or look lighthearted and playful?<p>
+                </th>
+                <td class="easing_bounce_ease-in">
+                  <div class="bounce controlled"></div>
+                  <code>cubic-bezier(0.6, -0.28, 0.735, 0.045)</code>
+                </td>
+                <td class="easing_bounce_ease-out">
+                  <div class="bounce trigger">Click me!</div>        
+                  <code>cubic-bezier(0.175, 0.885, 0.32, 1.275)</code>       
+                </td>
+                <td class="easing_bounce_ease-in-out">
+                  <div class="bounce"></div>
+                  <code>cubic-bezier(0.68, -0.55, 0.265, 1.55)</code>        
+                </td>
+              </tr> 
+              <tr>
+                <th scope="row">
+                  <code>subtle</code>
+                  <p>Are you animating color or opacity? Looking to make a shimmer, fade, or glow?<p>
+                </th>
+                <td class="easing_subtle_ease-in">
+                  <div class="fade controlled"></div>
+                  <code>cubic-bezier(0.47, 0, 0.745, 0.715)</code>
+                </td>
+                <td class="easing_subtle_ease-out">
+                  <div class="fade trigger">
+                    Click me!
+                  </div>
+                  <code>cubic-bezier(0.39, 0.575, 0.565, 1)</code>
+                </td>
+                <td class="easing_subtle_ease-in-out">
+                  <div class="fade"></div>
+                  <code>cubic-bezier(0.445, 0.05, 0.55, 0.95)</code>
+                </td>
+              </tr>   
+            </tbody>
+          </table>
+        
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="j.js" async defer></script>
+    </body>
+</html>
